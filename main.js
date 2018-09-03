@@ -199,7 +199,7 @@ var dataService = /** @class */ (function () {
         this.url = "api.openweathermap.org/data/2.5/weather?q=";
     }
     dataService.prototype.getWeather = function (city) {
-        return this.http.get("http://" + this.url + city + "&units=" + this.units + '&APPID=' + this.apiKey)
+        return this.http.get("https://" + this.url + city + "&units=" + this.units + '&APPID=' + this.apiKey)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.errorHandler));
     };
     dataService.prototype.errorHandler = function (err) {
